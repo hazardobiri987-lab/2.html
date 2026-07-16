@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Modern Dating Web App</title>
+    <style>
+        /* CSS Styling begins here */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; /* Prevents scrolling on the main app screen */
+        }
+
+        /* App Container */
+        .app-container {
+            width: 100%;
+            max-width: 450px;
+            height: 100vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Match Card Area */
+        .card-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 380px;
+            height: 500px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 75%;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.95));
+        }
+
+        .card-info h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card-info p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Action Buttons (Like/Dislike) */
+        .action-buttons {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 10px;
+            background-color: #fff;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            font-size: 26px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn:active {
+            transform: scale(0.9);
+        }
+
+        .btn-dislike {
+            color: #ff4b2b;
+            background: #ffebee;
+        }
+
+        .btn-dislike:hover {
+            background-color: #ffcdd2;
+            box-shadow: 0 6px 15px rgba(255, 75, 43, 0.3);
+        }
+
+        .btn-like {
+            color: #28a745;
+            background: #e8f5e9;
+        }
+
+        .btn-like:hover {
+            background-color: #c8e6c9;
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+            .app-container {
+                height: 100vh;
+                max-width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- App Main Screen -->
+    <div class="app-container">
+        <header>
+            MeetMe 💖
+        </header>
+
+        <!-- Profile Card -->
+        <div class="card-container">
+            <div class="card">
+                <!-- Replace the link below with your own image URL -->
+                <img src="https://unsplash.com" alt="User Profile">
+                <div class="card-info">
+                    <h2>Jessica, 24</h2>
+                    <p>📍 Nairobi, Kenya • 2 miles away</p>
+                    <p style="margin-top:5px;">Adventure seeker, coffee lover, and amateur chef. Looking for good vibes!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn btn-dislike">✖</button>
+            <button class="btn btn-like">✔</button>
+        </div>
+    </div>
+
+</body>
+</html>
